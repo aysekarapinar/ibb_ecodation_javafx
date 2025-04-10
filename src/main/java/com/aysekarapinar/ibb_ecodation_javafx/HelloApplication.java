@@ -1,4 +1,4 @@
-package com.aysekarapinar.ibb_ecodation_javafx2;
+package com.aysekarapinar.ibb_ecodation_javafx;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

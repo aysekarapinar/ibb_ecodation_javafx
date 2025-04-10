@@ -1,10 +1,10 @@
 src/
-├── com.aysekarapinar._javafx.dao/
+├── com.aysekarapinar._javafx.com.aysekarapinar.ibb_ecodation_javafx.dao/
 │   ├── UserDAO.java
 │   ├── DBConnection.java
-├── com.aysekarapinar._javafx.dto/
+├── com.aysekarapinar._javafx.com.aysekarapinar.ibb_ecodation_javafx.dto/
 │   ├── UserDTO.java
-├── com.aysekarapinar._javafx.controller/
+├── com.aysekarapinar._javafx.com.aysekarapinar.ibb_ecodation_javafx.controller/
 │   ├── LoginController.java
 │   ├── RegisterController.java
 ├── view/

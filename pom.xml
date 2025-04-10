@@ -9,8 +9,37 @@
     <version>1.0-SNAPSHOT</version>
     <name>ibb_ecodation_javafx2</name>
 
+    <url/>
+    <licenses>
+        <license/>
+    </licenses>
+    <developers>
+        <developer></developer>
+
+    </developers>
+    <scm>
+        <connection/>
+        <developerConnection/>
+        <tag/>
+        <url/>
+    </scm>
+
+    <packaging>jar</packaging>
+
     <properties>
+        <encoding>UTF-8</encoding>
+        <java.version>17</java.version>
+
+        <!--for maven-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!--Jenkins - SonarQube - Ve Maven İçin Gerekli-->
+        <maven.compiler.release>17</maven.compiler.release>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+
+        <!--junit-->
         <junit.version>5.10.2</junit.version>
     </properties>
 
@@ -19,6 +48,16 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>17.0.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>2.0.29</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
+            <version>0.4</version>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
@@ -147,7 +186,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.aysekarapinar.ibb_ecodation_javafx2/com.aysekarapinar.ibb_ecodation_javafx2.HelloApplication
+                                com.aysekarapinar.ibb_ecodation_javafx2/com.aysekarapinar.ibb_ecodation_javafx.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

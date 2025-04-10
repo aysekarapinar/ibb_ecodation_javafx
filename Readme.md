@@ -192,7 +192,7 @@ Harika! Aşağıda JavaFX kullanarak hazırlanmış basit ama yapılandırılmı
 örnekte:
 
 - FXML dosyasıyla arayüz tanımlandı.
-- Bir controller sınıfıyla olay yönetimi sağlandı.
+- Bir com.aysekarapinar.ibb_ecodation_javafx.controller sınıfıyla olay yönetimi sağlandı.
 - Ana sınıf uygulamayı başlatıyor.
 - Scene Builder ile çHamit MIZRAKşabilecek şekilde yapılandırılmıştır.
 
@@ -285,7 +285,7 @@ public class Controller {
 <?import javafx.geometry.Insets?>
 
 <VBox spacing="10.0" Hamit MIZRAKgnment="CENTER" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="application.Controller">
+      fx:com.aysekarapinar.ibb_ecodation_javafx.controller="application.Controller">
     <padding>
         <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
@@ -426,7 +426,8 @@ public class UserService {
 
 ```xml
 
-<VBox fx:controller="controller.UserController" xmlns:fx="http://javafx.com/fxml">
+<VBox fx:controller="com.aysekarapinar.ibb_ecodation_javafx.controller.UserController"
+      xmlns:fx="http://javafx.com/fxml">
     <TextField fx:id="txtName"/>
     <Button text="Add User" onAction="#handleAddUser"/>
 </VBox>
@@ -511,9 +512,9 @@ src/
 │   ├── java/
 │   │   ├── app/                 --> Uygulama giriş noktası
 │   │   ├── model/               --> Entity sınıfları
-│   │   ├── dao/                 --> DAO arayüz ve implementasyonları
+│   │   ├── com.aysekarapinar.ibb_ecodation_javafx.dao/                 --> DAO arayüz ve implementasyonları
 │   │   ├── service/             --> İş mantığı (business logic)
-│   │   ├── controller/          --> JavaFX controller sınıfları
+│   │   ├── com.aysekarapinar.ibb_ecodation_javafx.controller/          --> JavaFX com.aysekarapinar.ibb_ecodation_javafx.controller sınıfları
 │   ├── resources/
 │   │   ├── view/                --> FXML dosyaları
 │   │   ├── css/                 --> Stil dosyaları
@@ -566,10 +567,10 @@ göstereceğim. Uygulamada kullanıcı ismi girilecek, sistemde tutulacak ve Tab
 UserApp/
 ├── src/
 │   ├── app/               --> Main sınıfı
-│   ├── controller/        --> JavaFX Controller
+│   ├── com.aysekarapinar.ibb_ecodation_javafx.controller/        --> JavaFX Controller
 │   ├── model/             --> Entity sınıfı
 │   ├── service/           --> Servis sınıfı
-│   ├── dao/               --> DAO sınıfı (veri işlemleri)
+│   ├── com.aysekarapinar.ibb_ecodation_javafx.dao/               --> DAO sınıfı (veri işlemleri)
 │   └── util/              --> Yardımcı sınıflar (isteğe bağlı)
 ├── resources/
 │   ├── view/              --> FXML dosyası
@@ -609,10 +610,10 @@ public class User {
 
 ## ✅ 3. DAO Katmanı
 
-`dao/UserDao.java`
+`com.aysekarapinar.ibb_ecodation_javafx.dao/UserDao.java`
 
 ```java
-package dao;
+package com.aysekarapinar.ibb_ecodation_javafx.dao;
 
 import model.User;
 
@@ -625,10 +626,10 @@ public interface UserDao {
 }
 ```
 
-`dao/UserDaoImpl.java`
+`com.aysekarapinar.ibb_ecodation_javafx.dao/UserDaoImpl.java`
 
 ```java
-package dao;
+package com.aysekarapinar.ibb_ecodation_javafx.dao;
 
 import model.User;
 
@@ -659,8 +660,8 @@ public class UserDaoImpl implements UserDao {
 ```java
 package service;
 
-import dao.UserDao;
-import dao.UserDaoImpl;
+import com.aysekarapinar.ibb_ecodation_javafx.dao.UserDao;
+import com.aysekarapinar.ibb_ecodation_javafx.dao.UserDaoImpl;
 import model.User;
 
 import java.util.List;
@@ -692,7 +693,8 @@ public class UserService {
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.UserController" spacing="10" alignment="CENTER"
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.aysekarapinar.ibb_ecodation_javafx.controller.UserController"
+      spacing="10" alignment="CENTER"
       padding="20">
     <Label text="Kullanıcı Adı Girin"/>
     <TextField fx:id="txtName" promptText="Ad soyad"/>
@@ -709,10 +711,10 @@ public class UserService {
 
 ## ✅ 6. Controller Katmanı
 
-`controller/UserController.java`
+`com.aysekarapinar.ibb_ecodation_javafx.controller/UserController.java`
 
 ```java
-package controller;
+package com.aysekarapinar.ibb_ecodation_javafx.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -945,7 +947,7 @@ public void oldMethod() {
 ### 📌 `@Component`, `@Autowired`, `@Service`, `@PostConstruct`
 
 Eğer JavaFX uygulamanızı **Spring Framework** ile entegre ediyorsanız, bu anotasyonlar da kullanılabilir. Bu durumda
-controller sınıflarınız Spring bileşeni haline gelir.
+com.aysekarapinar.ibb_ecodation_javafx.controller sınıflarınız Spring bileşeni haline gelir.
 
 ### 📌 `@Data`, `@Getter`, `@Setter`, `@AllArgsConstructor`, `@NoArgsConstructor`
 
@@ -1007,7 +1009,7 @@ JavaFXAnnotationDemo/
 
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.demo.MainController"
+      fx:com.aysekarapinar.ibb_ecodation_javafx.controller="com.example.demo.MainController"
       spacing="10" alignment="CENTER" padding="20">
 
     <Label text="Adınızı girin:"/>
