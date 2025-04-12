@@ -513,7 +513,7 @@ src/
 │   │   ├── app/                 --> Uygulama giriş noktası
 │   │   ├── model/               --> Entity sınıfları
 │   │   ├── com.aysekarapinar.ibb_ecodation_javafx.dao/                 --> DAO arayüz ve implementasyonları
-│   │   ├── service/             --> İş mantığı (business logic)
+│   │   ├── com.aysekarapinar.ibb_ecodation_javafx.service/             --> İş mantığı (business logic)
 │   │   ├── com.aysekarapinar.ibb_ecodation_javafx.controller/          --> JavaFX com.aysekarapinar.ibb_ecodation_javafx.controller sınıfları
 │   ├── resources/
 │   │   ├── view/                --> FXML dosyaları
@@ -569,7 +569,7 @@ UserApp/
 │   ├── app/               --> Main sınıfı
 │   ├── com.aysekarapinar.ibb_ecodation_javafx.controller/        --> JavaFX Controller
 │   ├── model/             --> Entity sınıfı
-│   ├── service/           --> Servis sınıfı
+│   ├── com.aysekarapinar.ibb_ecodation_javafx.service/           --> Servis sınıfı
 │   ├── com.aysekarapinar.ibb_ecodation_javafx.dao/               --> DAO sınıfı (veri işlemleri)
 │   └── util/              --> Yardımcı sınıflar (isteğe bağlı)
 ├── resources/
@@ -655,10 +655,10 @@ public class UserDaoImpl implements UserDao {
 
 ## ✅ 4. Service Katmanı
 
-`service/UserService.java`
+`com.aysekarapinar.ibb_ecodation_javafx.service/UserService.java`
 
 ```java
-package service;
+package com.aysekarapinar.ibb_ecodation_javafx.service;
 
 import com.aysekarapinar.ibb_ecodation_javafx.dao.UserDao;
 import com.aysekarapinar.ibb_ecodation_javafx.dao.UserDaoImpl;
@@ -721,7 +721,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import model.User;
-import service.UserService;
+import com.aysekarapinar.ibb_ecodation_javafx.service.UserService;
 
 public class UserController {
 

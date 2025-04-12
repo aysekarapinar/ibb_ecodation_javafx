@@ -1,0 +1,23 @@
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.DashboardController">
+    <top>
+        <HBox spacing="10" padding="10">
+            <Label text="📊 Uygulama Paneli" style="-fx-font-size: 20px;"/>
+            <Label fx:id="clockLabel" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="10" padding="10">
+            <Button text="Not Defteri"/>
+            <Button text="KDV Hesaplama"/>
+            <Button text="Profil"/>
+            <Button text="Bildirimler"/>
+            <Button text="Yedekleme / Geri Yükleme"/>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,5 +1,5 @@
 // Gerekli izinleri verdiğimiz yer
-module com.aysekarapinar.ibb_ecodation_javafx {
+/*module com.aysekarapinar.ibb_ecodation_javafx {
 
     // JavaFX'in temel bileşenlerini kullanmak için gerekli modüller
     // JavaFX kontrol bileşenlerini (Button, Label, TextField vb.) kullanabilmek için gereklidir.
@@ -75,9 +75,9 @@ module com.aysekarapinar.ibb_ecodation_javafx {
     // Ana paketi dış dünyaya açıyoruz. Diğer modüller bu paketin içeriğini kullanabilir.
     exports com.aysekarapinar.ibb_ecodation_javafx.database;
     opens com.aysekarapinar.ibb_ecodation_javafx.utils to javafx.base, lombok;
-}
+}*/
 
-/*
+
     module com.aysekarapinar.ibb_ecodation_javafx {
     requires javafx.controls;
     requires javafx.fxml;
@@ -88,9 +88,14 @@ module com.aysekarapinar.ibb_ecodation_javafx {
     requires net.synedra.validatorfx;
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
-    //requires eu.hansolo.tilesfx;
+        requires org.apache.poi.poi;
+        requires static lombok;
+        requires java.sql;
+        requires com.h2database;
+        requires jbcrypt;
+        requires java.desktop;
+        //requires eu.hansolo.tilesfx;
 
     opens com.aysekarapinar.ibb_ecodation_javafx to javafx.fxml;
     exports com.aysekarapinar.ibb_ecodation_javafx;
 }
-*/
